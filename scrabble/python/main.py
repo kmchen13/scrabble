@@ -142,7 +142,19 @@ class Play:
 class Cursor:
     x: int
     y: int
+<<<<<<< HEAD
     dir: Direction | None
+=======
+    
+    #kmc_rc: dir: Direction | None
+    from typing import Optional
+    dir: Optional[Direction]
+    #kmc_rcf
+ 
+    from typing import Optional
+    dir: Optional[Direction] = None
+
+>>>>>>> 83c0929 (Initial commit of scrabble-main)
     def __init__(self):
         self.dir = None
         self.x   = 7
@@ -342,6 +354,14 @@ class MyGame(arcade.Window):
         self.display_hook_letters = Hooks.OFF
 
         self.DEFINITIONS = dict()
+<<<<<<< HEAD
+=======
+        #kmc_ac
+        os.chdir("scrabble/python")
+        current_working_directory = os.getcwd()
+        print(current_working_directory)
+        #kmc_acf
+>>>>>>> 83c0929 (Initial commit of scrabble-main)
         with open("../dictionary/nwl_2020.txt") as f:
             for line in f:
                 words = line.strip().split()
