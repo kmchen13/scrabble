@@ -12,14 +12,10 @@ class SolverState:
     # rack: ???
     # original_rack: ???
     # cross_check_results: ???
-<<<<<<< HEAD
-    direction: Direction | None
-=======
     #kmc_rc:direction: Direction | None
     from typing import Optional
     direction: Optional[Direction] = None
 
->>>>>>> 83c0929 (Initial commit of scrabble-main)
     plays: list[Any]  # This should be better defined: List[Tuple[Position, str, Set[CellCoord]]] or List[Play] as defined in main.py???
 
     def __init__(self, dictionary: Trie, board: Board, rack): # What is the type of rack?
